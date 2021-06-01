@@ -5,7 +5,10 @@ const BoxScreen = () => {
   return (
     <View style={styles.parentStyle}>
       <View style={styles.boxOne}></View>
-      <View style={styles.boxTwo}></View>
+
+      <View style={styles.viewTwoParent}>
+        <View style={styles.boxTwo}></View>
+      </View>
       <View style={styles.boxThree}></View>
     </View>
   );
@@ -13,36 +16,35 @@ const BoxScreen = () => {
 
 const styles = StyleSheet.create({
   parentStyle: {
-    // borderWidth: 3,
-    // borderColor: "black",
+    borderWidth: 3,
+    borderColor: "black",
     flexDirection: "row",
     justifyContent: "space-between",
-    // height: 200,
+    height: 200,
     // alignItems: "flex-end",
   },
 
   boxOne: {
-    borderWidth: 1,
+    // borderWidth: 1,
     backgroundColor: "lightpink",
     height: 50,
     width: 50,
-    borderColor: "red",
   },
   boxTwo: {
-    borderWidth: 1,
     backgroundColor: "mediumseagreen",
     height: 50,
     width: 50,
-    borderColor: "green",
-    // position: "absolute",
-    top: 80,
-    alignSelf: "center",
+    // marginTop: 50,
+    alignSelf: "flex-end",
   },
   boxThree: {
-    borderWidth: 1,
     backgroundColor: "mediumorchid",
     height: 50,
     width: 50,
+  },
+  viewTwoParent: {
+    height: 100,
+    justifyContent: "flex-end",
   },
 });
 
